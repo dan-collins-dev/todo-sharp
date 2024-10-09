@@ -4,8 +4,8 @@ namespace TodoApp
 {
     public class Todo
     {
-        public string Name = "";
-        public string Description = "";
+        public string? Name { get; set; }
+        public string? Description { get; set; }
 
         public void Print()
         {

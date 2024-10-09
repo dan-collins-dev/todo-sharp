@@ -3,15 +3,30 @@ using TodoApp;
 
 namespace Program
 {
-    public class Program 
+    public class Program
     {
+        public static bool running = true;
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World! This is the beginning of my TodoApp written in C#!");
-            Console.WriteLine();
+            Console.WriteLine(@"
+=======================================================
+Todo App in C# (console version) written by Dan Collins
+=======================================================
 
-            Todo todo1 = new Todo { Name = "Take out trash", Description = "The trash needs to be taken out now!" };
-            todo1.Print();
+//Todo App
+What would you like to do?
+");
+
+            App app = new App();
+            Todo todo = new Todo();
+            todo.Name = "Do the dishes";
+            app.AddTodo(todo);
+            app.PrintTodos();
+
+
+            //while (running)
+            //{
+            //}
         }
     }
 }
